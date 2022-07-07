@@ -1,0 +1,117 @@
+.section-about{
+    padding-left: 1.5rem;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-about{
+    font-size: 2rem;
+    color: #08fdd0;
+    margin-bottom: 30px;
+
+}
+.header-about h2{
+   margin-bottom: 60px;
+
+}
+.header-about h2::after{
+    content: '<h2>';
+    position: absolute;
+    bottom:-1260px;
+    left: 18rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+.header-about h2::before{
+    content: '</h2>';
+    position: absolute;
+    bottom:-1335px;
+    left: 18rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+
+.text-zone-about p{
+    margin-bottom: 15px;
+    line-height: 1.5rem;
+}
+.text-zone-about p::after{
+    content: '<p>';
+    position: absolute;
+    bottom:-1365px;
+    left: 18rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+.text-zone-about p::before{
+    content: '</p>';
+    position: absolute;
+    bottom:-1770px;
+    left: 18rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+
+.text-zone-about{
+    width: 40%;
+}
+#myCanvas {
+    margin: auto;
+    width: 100%;
+  }
+
+.fake-big-3{
+    font-size: 23rem;
+    font-weight: 700;
+    position: absolute;
+    right: 20px;
+    bottom:-1450px;
+    color: #2d2d2e;
+    letter-spacing: -10px;
+    z-index: -999;
+}
+.fake-big-4{
+    font-size: 23rem;
+    font-weight: 700;
+    position: absolute;
+    left: 150px;
+    bottom:-1950px;
+    color: #2d2d2e;
+    letter-spacing: -10px;
+    z-index: -999;
+}
+
+  @media screen and (min-width: 1200px){
+    .section-about{
+        flex-direction: row ;
+        padding-left: 12rem;
+        margin: 100px auto 0 ;
+        width: 90%;
+    }
+    .header-work{
+        width: 500px;
+        font-size: 3rem;
+
+    }
+    .text-zone-about p{
+        width: 600px;
+
+    }
+    .skills-charts{
+        margin-right: 5%;
+
+    }
+    .fake-big-3{
+
+    }
+}

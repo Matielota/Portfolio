@@ -96,7 +96,7 @@
     color:rgb(21, 216, 177);
 }
 
-@media screen and (min-width: 950px){
+@media screen and (min-width: 1200px){
     .aside{
         width: 10%;
         height: 100%;

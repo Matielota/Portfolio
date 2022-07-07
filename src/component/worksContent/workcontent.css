@@ -49,7 +49,7 @@
     opacity: 1;
 
 }
-@media screen and (min-width: 950px){
+@media screen and (min-width: 1200px){
     .li-magic-wall{
         width: 341px;
         height: 341px;
