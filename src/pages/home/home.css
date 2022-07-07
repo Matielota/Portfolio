@@ -1,0 +1,85 @@
+
+
+
+.sound-container{
+    width: 95%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+.sound-container::after{
+    content: '<html>';
+    position: absolute;
+    top: 10px;
+    left: 13rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+.sound-container::before{
+    content: '<body>';
+    position: absolute;
+    top: 50px;
+    left: 14rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+
+#sound{
+    font-size: 2rem;
+    padding: 7px;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.sound-cloud{
+    font-size: 2rem;
+    margin: 7px;
+    color: #08fdd8;
+}
+.on-off{
+    cursor: pointer;
+    margin-left: 5px;
+
+}
+#off{
+    font-size: 2rem;
+    color: rgb(192, 4, 45);
+    display: none;
+}
+#on{
+    font-size: 2rem;
+    color: #08fdd8;
+}
+
+.buttons-container{
+    font-size: 2rem;
+    padding: 10px;
+    background-color: #181818;
+    color: #fff;
+    cursor: pointer;
+
+}
+.times{
+    display: none;
+}
+
+@media screen and (min-width: 950px){
+    .sound-container{
+        justify-content: flex-end;
+    }
+    .buttons-container{
+        display: none;
+    }
+    
+    
+}
+
