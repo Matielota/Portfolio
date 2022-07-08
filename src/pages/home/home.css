@@ -75,6 +75,7 @@
 @media screen and (min-width: 1200px){
     .sound-container{
         justify-content: flex-end;
+        width: calc(100% - 10%);
     }
     .buttons-container{
         display: none;
@@ -82,4 +83,11 @@
     
     
 }
+@media screen and (min-width:1024){
+    
+}
+@media screen and (min-width:730){
+    
+}
+
 

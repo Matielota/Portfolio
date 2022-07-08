@@ -1,0 +1,52 @@
+.contact-section{
+    width: 85%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.contact-heading{
+    margin-bottom: 30px;
+}
+.form-input-group{
+    width: 100%;
+    position: relative;
+}
+.form-input-group input,textarea{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    font-size: 0.957rem;
+    box-shadow: 0 0 0px 1000px #2b2b2b inset;
+}
+.form-input-group textarea{
+    height: 25vh;
+    padding: 10px 20px;
+
+}
+.form-input-group input + span::after , .form-input-group textarea + span::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: #f50057;;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s linear;
+}
+.form-input-group input:focus + span::after{
+    width: 100%;
+}
+.form-input-group textarea:focus + span::after{
+    width: 100%;
+}
+
+
+

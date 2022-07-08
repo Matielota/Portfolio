@@ -5,6 +5,8 @@
     display: flex;
     align-items: center;
     padding-left: 1.5rem;
+    position: relative;
+    
 }
 .img-home{
     width: 70px;
@@ -69,7 +71,7 @@
 
   .contact-button{
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 40px;
     text-decoration: nome;
     text-align: center;
     width: 300px;
@@ -81,7 +83,7 @@
     position: relative;
     background-color: transparent;
     border: none;
-    color: #08fdd0;
+    color: #f50057;
   }
 
   .contact-button::after{
@@ -119,7 +121,7 @@
     left: -5px;
     top:0;
     transition: all .3s ease-in-out;  
-    background-color: #08fdd0;
+    background-color: #f50057;
     transform: skewX(-19deg);
 }
 .contact-button:hover span.bg{
@@ -131,7 +133,7 @@
     height: 100%;
     position:absolute;
     left: 0;
-    border: 1px solid #08fdd0;
+    border: 1px solid #f50057;
     box-sizing: border-box;
 }
 .contact-button span.text{
@@ -161,6 +163,7 @@
     transform: rotate(90deg);
     display: block;
     font-size: 14px;
+    color: #f50057;
 
 }
 .scroll-down--left{
@@ -204,5 +207,7 @@
         margin-left: 10px;
         background-color: transparent;
     }
-    
+    .scroll-down--left{
+        margin-left: -280px;
+    }
 }

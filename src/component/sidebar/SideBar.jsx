@@ -27,11 +27,10 @@ export default function SideBar({sideNav}) {
                     <img src={m} alt="" />
                     <span>Matielota</span>
                  </a>
-            <span>Full Stack Developer</span>
+                <span className='profession'>Full Stack Developer</span>
             </div>
             <nav className="nav-links">
             <a href='/about'> Sobre mi:</a>
-            <a href='/skills'> Mis Habilidades</a>
             <a href='/projects'> Projectos</a>
             <a href='/learn'> Estudios</a>
             <a href='/contact'> Contacto</a>

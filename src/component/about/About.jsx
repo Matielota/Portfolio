@@ -16,8 +16,7 @@ export default function About() {
             TagCanvas.Start('myCanvas');
          
         } catch(e) {
-          // something went wrong, hide the canvas container
-          document.getElementById('myCanvasContainer').style.display = 'none';
+          console.log(e)
         }
       };
 
@@ -43,9 +42,10 @@ export default function About() {
                 Es por ello que me encuentro perfeccionando mas y mas mis habilidades para lograr este cometido!
             </p>
             <br />
-            <p>
+            <p className='last-p-about'>
             ¿Lo he logrado contigo?¿Te gustaria llevar tus paginas al proximo nivel trabajando juntos?
             </p>
+            <div className="fake-big-4">About</div>
         </div>
         <div className="skills-charts">
             <div className="myCanvasContainer">
@@ -70,9 +70,9 @@ export default function About() {
                 </ul>
                 </canvas>
             </div>
+            <div className="fake-big-3">Skills</div>
         </div>
-        <div className="fake-big-4">About</div>
-        <div className="fake-big-3">Skills</div>
+        
       </section>
     </div>
   )

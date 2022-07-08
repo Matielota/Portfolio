@@ -1,11 +1,11 @@
 .aside{
-    width: 100%;
+    width: 95%;
     height: 0;
     position: fixed;
     top:0;
     left: 0;
     z-index:1;
-    overflow: hidden; 
+    overflow:hidden; 
     background-color: #191919;
 }
 
@@ -104,5 +104,8 @@
     .logo-section{
         height: 25vh;
     }
-    
+    .profession{
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
 }

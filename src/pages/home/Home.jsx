@@ -10,6 +10,7 @@ import song from "./Night.mp3"
 import { useState } from 'react'
 import Works from '../../component/works/Works'
 import About from '../../component/about/About'
+import Contact from "../../component/Contact/Contact"
 
 export default function Home() {
   let onSpan = useRef(null)
@@ -73,6 +74,7 @@ return (
         <TextHome></TextHome>
         <Works></Works>
         <About></About>
+        <Contact></Contact>
     </div>
   )
 }

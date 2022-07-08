@@ -5,9 +5,9 @@ import WorkContent from '../worksContent/WorkContent'
 export default function Works() {
   return (
     <div>
-      <section className="section-work">
+      <aside className="section-work">
         <div className="header-work">
-            <h2>Mi Portafolio</h2>
+            <h2 className='title-work'>Mi Portafolio</h2>
         </div>
         <div className='text-zone-work'>
             <div>
@@ -25,7 +25,7 @@ export default function Works() {
             </div>
         </div>
         <div className="fake-big-2">Work</div>
-      </section>
+      </aside>
       <div className="magic-wall-section">
         <ul>
             <WorkContent img={"https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440"}/>
