@@ -48,5 +48,13 @@
     width: 100%;
 }
 
+.error {
+    
+    border-bottom: 2px solid red;
+    transition: all 0.2s linear;
+}
 
-
+.success{
+    border-bottom: 2px solid green;
+    transition: all 0.2s linear
+}
