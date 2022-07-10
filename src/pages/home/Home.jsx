@@ -55,26 +55,29 @@ function handleMenu(navCondition){
 
 
 return (
+    <div className='containerAll'>
     <div className='primero'>
        <header className='sound-container'>
-        <div id="sound">
-          <FontAwesomeIcon icon={faSoundcloud} className="sound-cloud" ref={soundCloudAudio}/>
-          <span>Sound</span>
-          <div className="on-off">
-            <span id="off" onClick={()=>soundTrack("off")} ref={offSpan}>off</span>
-            <span id="on" onClick={()=>soundTrack("on")}ref={onSpan}>on</span>
+          <div id="sound">
+              <FontAwesomeIcon icon={faSoundcloud} className="sound-cloud" ref={soundCloudAudio}/>
+              <span>Sound</span>
+              <div className="on-off">
+                <span id="off" onClick={()=>soundTrack("off")} ref={offSpan}>off</span>
+                <span id="on" onClick={()=>soundTrack("on")}ref={onSpan}>on</span>
+              </div>
           </div>
-        </div>
-        <div className="buttons-container">
-        <FontAwesomeIcon icon={faBars}  className="bars" ref={barsIcon} onClick={()=>handleMenu("open")}/>
-        <FontAwesomeIcon icon={faTimes} className="times" ref={timesIcon} onClick={()=>handleMenu("close")}/>
-        </div>
+          <div className="buttons-container">
+              <FontAwesomeIcon icon={faBars}  className="bars" ref={barsIcon} onClick={()=>handleMenu("open")}/>
+              <FontAwesomeIcon icon={faTimes} className="times" ref={timesIcon} onClick={()=>handleMenu("close")}/>
+          </div>
         </header>
+        
         {stateNav==="open"? <SideBar sideNav={stateNav}/> : <SideBar sideNav={stateNav}/>}
         <TextHome></TextHome>
         <Works></Works>
         <About></About>
         <Contact></Contact>
+    </div>
     </div>
   )
 }

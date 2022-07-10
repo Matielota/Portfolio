@@ -4,15 +4,31 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-left: 1.5rem;
     position: relative;
     
 }
+.letters{
+    opacity: 1;
+    display: inline-block;
+    animation-duration: 1s;
+    animation: letters 1s linear;
+}
+.greyText{
+    opacity: 1;
+    display: inline-block;
+    animation-duration: 1s;
+    animation: gray 1s linear; 
+}
+
 .img-home{
-    width: 70px;
-    height: 100px;
+    width: 50px;
+    height: 60px;
     margin-left: 10px;
     background-color: transparent;
+}
+.text-zone{
+    position: relative;
+    padding-left: 1.5rem
 }
 .text-zone h1{
     font-size: 3rem;
@@ -20,6 +36,12 @@
     letter-spacing: -3px;
     position: relative;
 }
+.text-zone span:hover{
+    color: #f50057;
+    transform: scale(1.3);
+    animation: gray 0.3s linear; 
+}
+
 .text-zone h1::before{
     content: '<h1>';
     position: absolute;
@@ -153,7 +175,7 @@
 
 .scroll-down{
     position: absolute;
-    right: -20px;
+    right: 0px;
     bottom: 30px;
     margin-bottom: 50px;
     display: flex;
@@ -186,6 +208,46 @@
     transform: rotate(270deg);
     margin-left: 10px;
 }
+
+@keyframes letters{
+    0%{
+        opacity: 0;
+        transform: scale(0.3) translate3d(0,0,0);
+      }
+      20%{
+        transform: scale(1.5)
+      }
+      40%{
+        opacity: 0.9;
+        transform: scale(0.6);
+      }
+      60%{
+        transform: scale(1.2);
+      }
+      80%{
+        opacity: 1;
+        transform: scale(0.8);
+      }
+      100%{
+        opacity: 1;
+        transform: scale(1) translate3d(0,0,0);
+      }
+    
+}
+
+@keyframes gray{
+    0%,   to {
+        transform: translateY(0);
+      }
+    
+      50% {
+        transform: translateY(-15px);
+      }
+}
+.scroll-down-icon{
+    transform: rotate(270deg);
+    margin-left: 10px;
+}
 @media screen and (min-width: 1200px){
     .section-home{
         margin-left: 15rem;
@@ -210,4 +272,5 @@
     .scroll-down--left{
         margin-left: -280px;
     }
+    
 }

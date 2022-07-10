@@ -6,9 +6,9 @@ export default function Works() {
   return (
     <div>
       <aside className="section-work">
-        <div className="header-work">
-            <h2 className='title-work'>Mi Portafolio</h2>
-        </div>
+            <div className="header-work">
+                <h2 className='title-work'>Mi Portafolio</h2>
+            </div>
         <div className='text-zone-work'>
             <div>
                 <p> Estos son los projectos en los que he trabajado, en back end utilizando Node.js sequelize MySQL,MongoDb
@@ -21,7 +21,7 @@ export default function Works() {
                     <span className='base'></span>
                     <span className='text'> Mas sobre mi</span>
                 </div>    
-            </button>
+                </button>
             </div>
         </div>
         <div className="fake-big-2">Work</div>
