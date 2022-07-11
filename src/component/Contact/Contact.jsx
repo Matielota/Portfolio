@@ -56,8 +56,19 @@ export default function Contact() {
         
             <div className="contact-heading">
             <div className="fake-big-contact" >/Contact</div>
-                <div className="header-work"> 
-                    <h2>Contactame:</h2>
+                <div className="title-work-contact"> 
+                    <h2>
+                    <span>C</span>
+                    <span>o</span>
+                    <span>n</span>
+                    <span>t</span>
+                    <span>a</span>
+                    <span>c</span>
+                    <span>t</span>
+                    <span>a</span>
+                    <span>m</span>
+                    <span>e</span>
+                    </h2>
                 </div>
                 <p>Siempre estoy interesado en nuevos proyectos, cualquier duda o consulta puedes escribirme </p>
             </div>

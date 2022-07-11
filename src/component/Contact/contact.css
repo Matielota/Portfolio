@@ -34,30 +34,9 @@
     position: relative;
 
 }
-.header-work{
-    position: relative;
-}
 
-.header-work h2::before{
-    content: '<h2>';
-    position: absolute;
-    top: -20px;
-    left: 0px;
-    font-size: 1.2rem;
-    font-family: 'La Belle Aurore', cursive;
-    color: #666565;
-    letter-spacing: 3px;
-}
-.header-work h2::after{
-    content: '</h2>';
-    position: absolute;
-    top: 25px;
-    left: 180px;
-    font-size: 1.2rem;
-    font-family: 'La Belle Aurore', cursive;
-    color: #666565;
-    letter-spacing: 3px;
-}
+
+
 .form-input-group{
     width: 100%;
     position: relative;
@@ -141,17 +120,22 @@
         top: -100px;  
         right: 0;
     }
-    .header-work h2::after{
-        top: 30px;
-        left: 150px;
-    }
-    .contact-section::before{
-        top: 0;
-        left: 0;
-    }
+  
        
-    .contact-section::after{
-        bottom: 0;
-        right: 0;
-    }
+}
+
+
+.title-work-contact:hover{
+    color: #f50057;
+    animation-duration: 3s;
+    animation: animation_hover 3s; 
+}
+
+.title-work-contact{
+    width: 100%;
+    font-size: 2rem;
+    color: #f50057;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
 }

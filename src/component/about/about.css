@@ -1,10 +1,9 @@
 .section-about{
-    padding: 5rem 0 5rem 1.5rem;
     position: relative;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -12,7 +11,32 @@
     font-size: 2rem;
     color: #f50057;
     margin-bottom: 30px;
+    position: relative;
 
+}
+.header-about:hover{
+    color: #f50057;
+    animation-duration: 3s;
+    animation: animation_hover 3s; 
+}
+
+@keyframes animation_hover{
+    0%,   to {
+        transform: translateY(0);
+      }
+    
+      20% {
+        transform: translateY(-30px);
+      }
+      40%{
+        transform: translateX(30px);
+      }
+      60%{
+        transform: translateZ(30px);
+      }
+      80%{
+        transform: rotate(180deg);
+      }
 }
 .header-about h2{
    margin-bottom: 60px;
@@ -28,6 +52,7 @@
 
 .text-zone-about{
     width: auto;
+    position: relative;
 }
 #myCanvas {
     margin: auto;
@@ -49,10 +74,14 @@
     font-weight: 700;
     position: absolute;
     left: 0px;
-    bottom:0;
+    top:-80px;
     color: #2d2d2e;
     letter-spacing: -10px;
     z-index: -999;
+}
+.skills-charts{
+    position: relative;
+    width: 50%;
 }
 
   @media screen and (min-width: 1200px){
@@ -62,20 +91,13 @@
         margin: 100px auto 0 ;
         width: 90%;
     }
-    .header-work{
-        width: 500px;
-        font-size: 3rem;
-
-    }
+   
     .text-zone-about p{
         width: 600px;
 
     }
     .skills-charts{
         margin-right: 5%;
-
-    }
-    .fake-big-3{
 
     }
 }
