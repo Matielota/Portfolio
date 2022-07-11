@@ -46,7 +46,7 @@ export default function ClickCare() {
        </a>
       </section>
       <div className="media-container">
-        <ReactPlayer  style={{margin:"20px 20px 20px 20px", width:"auto"}} url='https://youtu.be/_g3soXhtrSE' />
+        <ReactPlayer  className="video-clickcare" url='https://youtu.be/_g3soXhtrSE' width="auto" />
         <img src="https://ucarecdn.com/48d52e14-9bad-4177-a579-d5790b769392/clickCare.jpg" alt="" />
         <img src="https://ucarecdn.com/7e39f5d3-105a-4828-b99e-e5a3b4aa518d/profileclickCare.png" alt="" />
         </div>
