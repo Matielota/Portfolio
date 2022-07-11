@@ -60,7 +60,7 @@
   }
 
 .fake-big-3{
-    font-size: 12rem;
+    font-size: 7rem;
     font-weight: 700;
     position: absolute;
     right:0px;
@@ -70,7 +70,7 @@
     z-index: -999;
 }
 .fake-big-4{
-    font-size: 12rem;
+    font-size: 7rem;
     font-weight: 700;
     position: absolute;
     left: 0px;

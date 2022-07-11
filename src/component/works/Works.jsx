@@ -38,7 +38,7 @@ export default function Works() {
                   </button>
                 </div>
         </div>
-        <div className="fake-big-2">/ Work</div>
+        <div className="fake-big-2">/Work</div>
       </aside>
       <div className="magic-wall-section">
           <ul>

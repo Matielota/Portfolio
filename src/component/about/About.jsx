@@ -26,7 +26,7 @@ export default function About() {
                    <div className="header-about">
                          <h2>Sobre mi:</h2>
                    </div>
-                   <div className="fake-big-4">/ About</div>
+                   <div className="fake-big-4">/About</div>
                    <p>
                        Desde pequeño veo las cosas desde el punto de vista logico, tal vez por esto es que estudie
                        Matematicas, pues en ese mundo todo se resuelve si haces los procedimientos correctos segun la logica.
