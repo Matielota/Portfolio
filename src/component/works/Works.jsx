@@ -1,7 +1,7 @@
 import React from 'react'
 import "./works.css"
 import WorkContent from '../worksContent/WorkContent'
-
+import {Link} from "react-router-dom"
 export default function Works() {
   return (
     <div className='work-container'>
@@ -42,7 +42,9 @@ export default function Works() {
       </aside>
       <div className="magic-wall-section">
           <ul>
-            <WorkContent img={"https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440"}/>
+            <Link to="./clickcare">
+            <WorkContent img={"https://ucarecdn.com/c56723ea-8f2e-42c2-965d-25621e0db538/imagenclickcare.jpg"}/>
+            </Link>
             <WorkContent img={"https://concepto.de/wp-content/uploads/2015/03/paisaje-800x409.jpg"}/>
             <WorkContent img={"https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg"}/>
             <WorkContent img={"https://img.freepik.com/foto-gratis/hermoso-camino-madera-que-impresionantes-arboles-coloridos-bosque_181624-5840.jpg?w=2000"}/>
