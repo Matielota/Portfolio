@@ -14,7 +14,7 @@
 .primero::after{
     content: '<html>';
     position: absolute;
-    top: 70px;
+    top: 20px;
     left: 10px;
     margin-left: 0rem;
     font-size: 1.2rem;
@@ -83,12 +83,12 @@
         display: none;
     }
     .primero::after{
-        top: 70px;
+        top: 30px;
         left: 200px;
         
     }
     .primero::before{
-        top: 90px;
+        top: 50px;
         left: 200px;
         
     }

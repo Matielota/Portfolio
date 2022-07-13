@@ -49,6 +49,10 @@
     opacity: 1;
 
 }
+
+.image-work-content{
+    background-position: center;
+}
 @media screen and (min-width: 1200px){
     .li-magic-wall{
         width: 350px;
