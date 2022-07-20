@@ -46,14 +46,13 @@ export default function Works() {
             <WorkContent img={"https://ucarecdn.com/c56723ea-8f2e-42c2-965d-25621e0db538/imagenclickcare.jpg"}/>
             </Link>
             <WorkContent img={"https://is3-ssl.mzstatic.com/image/thumb/Purple122/v4/2c/09/3e/2c093eec-11ec-b433-d631-7ae419ab65ff/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"} linkto={"https://climapp-matielota.vercel.app/"}/>
-            <WorkContent img={"https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg"}/>
-            <WorkContent img={"https://img.freepik.com/foto-gratis/hermoso-camino-madera-que-impresionantes-arboles-coloridos-bosque_181624-5840.jpg?w=2000"}/>
-            <WorkContent img={"https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg"}/>
-            <WorkContent img={"https://www.artmajeur.com/medias/hd/v/a/valeria-ec11/artwork/9732760_paisajes-hermosos-cascada.jpg"}/>
-            <WorkContent img={"https://kaikucaffelatte.com/blog/wp-content/uploads/2020/03/shutterstock_510679489-scaled-e1648037045335.jpg"}/>
-            <WorkContent img={"https://www.telesurtv.net/__export/1638504305316/sites/telesur/img/2021/12/02/p2.jpg"}/>
-            <WorkContent img={"https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}/>
-            <WorkContent img={"https://static.dw.com/image/58845200_303.jpg"}/>
+            
+            <WorkContent img={"https://firebasestorage.googleapis.com/v0/b/ecomerce-325cc.appspot.com/o/matielotasshop.jpg?alt=media&token=0436680e-1482-4cb5-8476-60cb6b8c7104"} linkto={"https://deploy-front-ecomerce.vercel.app/"}/>
+
+            <WorkContent img={"https://firebasestorage.googleapis.com/v0/b/ecomerce-325cc.appspot.com/o/1658259168646dog.png?alt=media&token=c961c03f-30dd-45f4-8ccc-8b9ed743da29"} linkto={"https://dogis-front-end.vercel.app/"}/>
+
+            <WorkContent img={"https://firebasestorage.googleapis.com/v0/b/ecomerce-325cc.appspot.com/o/portfoliotapa.jpg?alt=media&token=543edb7e-97ba-4e9a-96b9-e216ba12fe1b"} linkto={"https://portfolio-matielota.vercel.app/"}/>
+            
           </ul>
       </div>
     </div>

@@ -31,8 +31,7 @@ export default function SideBar({sideNav}) {
             </div>
             <nav className="nav-links">
             <a href='/about'> Sobre mi:</a>
-            <a href='/projects'> Projectos</a>
-            <a href='/learn'> Estudios</a>
+            <a href='/projects'> Proyectos</a>
             <a href='/contact'> Contacto</a>
             </nav>
             <ul className='social-icons'>

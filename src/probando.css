@@ -1,0 +1,9 @@
+
+.container-single-proyect{
+background-color: rgb(255, 118, 77); 
+animation-fill-mode: both; 
+animation-duration: 1000ms; 
+animation-delay: 0ms; 
+animation-iteration-count: 1; 
+opacity: 1; 
+}

@@ -3,8 +3,14 @@ import "./about.css";
 import TagCanvas from 'tag-canvas';
 import { blue } from '@material-ui/core/colors';
 import { useRef } from 'react';
-
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 export default function About() {
+  const particlesInit = async (main) => {
+    await loadFull(main);
+  };
+  const particlesLoaded = (container) => {
+  };
     let canvasArray= useRef(null)
     window.onload = function() {
         try {
@@ -21,6 +27,7 @@ export default function About() {
       };
 
   return (
+    <div> 
       <section className="section-about">
            <div className="text-zone-about">
                    <div className="header-about">
@@ -74,5 +81,6 @@ export default function About() {
                 
             </div>
       </section>
+      </div>
   )
 }
