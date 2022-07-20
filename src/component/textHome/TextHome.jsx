@@ -112,7 +112,7 @@ const TextZoneSpan=styled.span`
                     <span className='text'> Contactame!</span>
                 </div>    
             </button>
-            <button onClick={(e)=>setColor("#08fdd8")}> soy el boton</button>
+            
         </TextZone>
         <div className="scroll-down" color={color}>
             <span>scroll down</span>
