@@ -42,9 +42,9 @@ export default function Works() {
       </aside>
       <div className="magic-wall-section">
           <ul>
-            <Link to="./clickcare">
-            <WorkContent img={"https://ucarecdn.com/c56723ea-8f2e-42c2-965d-25621e0db538/imagenclickcare.jpg"}/>
-            </Link>
+            
+            <WorkContent img={"https://ucarecdn.com/c56723ea-8f2e-42c2-965d-25621e0db538/imagenclickcare.jpg"} linkto={"https://deploy-click-care.vercel.app/"}/>
+        
             <WorkContent img={"https://is3-ssl.mzstatic.com/image/thumb/Purple122/v4/2c/09/3e/2c093eec-11ec-b433-d631-7ae419ab65ff/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"} linkto={"https://climapp-matielota.vercel.app/"}/>
             
             <WorkContent img={"https://firebasestorage.googleapis.com/v0/b/ecomerce-325cc.appspot.com/o/matielotasshop.jpg?alt=media&token=0436680e-1482-4cb5-8476-60cb6b8c7104"} linkto={"https://deploy-front-ecomerce.vercel.app/"}/>
