@@ -1,10 +1,6 @@
 import React from 'react'
-import "./texthome.css"
-import m from "./letraMsi.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faArrowDown} from "@fortawesome/free-solid-svg-icons"
-import { Fade, JackInTheBox,Roll,Slide,Bounce } from "react-awesome-reveal";
-import { useState } from 'react'
 import styled,{ keyframes } from "styled-components";
 import { greatView } from "../../responsive.js";
 import { useDispatch, useSelector} from "react-redux";

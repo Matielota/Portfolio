@@ -1,9 +1,8 @@
 import React from 'react'
-import "./workcontent.css"
 import styled,{ keyframes } from "styled-components";
 import { SiVercel,SiGithubactions} from 'react-icons/si';
 import { useSelector } from 'react-redux';
-import { faWindows } from '@fortawesome/free-brands-svg-icons';
+
 
 export default function WorkContent({img,linkto,linkto2,textTop,textTop2,title}) {
   const color= useSelector((state)=>state.color)
