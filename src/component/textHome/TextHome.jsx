@@ -11,6 +11,14 @@ import { useDispatch, useSelector} from "react-redux";
 
 export default function TextHome() {
 const color= useSelector((state)=>state.color)
+
+const letraAzul= "https://ucarecdn.com/b1725547-880b-4c7c-87f0-8cd69a1be26c/letraMazulverdad.png"
+const letraVioleta = "https://ucarecdn.com/5f6f870a-9624-481b-b57d-20e2436b3d82/letramVioleta.png"
+const letraNaranja = "https://ucarecdn.com/472c9064-a09c-45f6-9db2-c9fe17cbe9a1/letramnaranja.png"
+const letraVerde= "https://ucarecdn.com/22791674-57d2-4db0-8a07-ef7830ba8ff4/letramverde.png"
+const letraRoja="https://ucarecdn.com/6e6b62b3-7462-4e8c-9dc5-fbb2ce760c6f/letramroja.png"
+const letraVerdeFluor="https://ucarecdn.com/6ea30276-ce41-462c-84c8-8b60a1c422db/letraverdefluor.png"
+const letraOriginal="https://ucarecdn.com/22794b69-fdb7-4fd7-86a0-f25e687d0b04/letramoriginal.png"
 const SectionHome= styled.section`
     height: 100vh;
     display: flex;
@@ -153,18 +161,13 @@ const SocialIconslia=styled.a`
   return (
       <SectionHome key="SectionHome">
         
-        <TextZone key="TextZone">
-            <TextZoneh1 key="TextZoneh1">
-            <Fade direction={"right"} delay={300} cascade={true} triggerOnce={true} >
-                <div>
+            <TextZone key="TextZone">
+            <TextZoneh1 key="TextZoneh1"> 
             <TextZoneSpan  key="TextZoneSpan1">H</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan2">o</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan3" >l</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan4">a</TextZoneSpan>
-            </div>
-            </Fade>
-            <Fade direction={"up"} delay={1200} cascade={true} triggerOnce={true}>
-            <div>
+              <br /> 
             <TextZoneSpan key="TextZoneSpan5">Y</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan6">o</TextZoneSpan>
                 <span style={{opacity:"0"}}>_</span>
@@ -172,17 +175,16 @@ const SocialIconslia=styled.a`
             <TextZoneSpan key="TextZoneSpan8">o</TextZoneSpan> 
             <TextZoneSpan key="TextZoneSpan9">y </TextZoneSpan>
             <span style={{opacity:"0"}}>_</span>
-            <ImgHome src={m} alt="Matielota"/>
+            <ImgHome src={color === "#3498db"? letraAzul : color === "#3200ff" ? letraVioleta : 
+        color === "#fa6001" ? letraNaranja : color === "#00ee39" ? letraVerde : color === "#f40000" ? 
+        letraRoja : color === "#00f7b5" ? letraVerdeFluor : letraOriginal} alt="Matielota"/>
             <TextZoneSpan key="TextZoneSpan10">a</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan11">t</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan13">i</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan14">a</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan15">s</TextZoneSpan> 
             <TextZoneSpan key="TextZoneSpan16">,</TextZoneSpan>
-            </div>
-            </Fade>
-            <Fade direction={"right"} delay={2000} cascade={true} triggerOnce={true} >
-            <div>
+            <br />
             <TextZoneSpan key="TextZoneSpan17">w</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan18">e</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan19">b </TextZoneSpan> 
@@ -196,15 +198,8 @@ const SocialIconslia=styled.a`
             <TextZoneSpan key="TextZoneSpan26">p</TextZoneSpan> 
             <TextZoneSpan key="TextZoneSpan27">e</TextZoneSpan>
             <TextZoneSpan key="TextZoneSpan28">r</TextZoneSpan>
-            </div>
-            </Fade>
             </TextZoneh1>
-            <Roll direction={"left"} delay={2800} cascade={true} triggerOnce={true} >
             <GrayText key="GrayText">Full Stack Web Developer</GrayText>
-            </Roll>
-            <br />
-            <Roll direction={"left"} delay={2800} cascade={true} triggerOnce={true} >
-            <Bounce direction={"left"} delay={2800} cascade={true} triggerOnce={true} >
             <ContactButton key="ContactButton">
                 <SocialIconslia href="https://www.linkedin.com/in/matias-caceres00/" id="WorkContainer105">
                 <ContactButtonDiv key="ContactButtonDiv">
@@ -214,13 +209,9 @@ const SocialIconslia=styled.a`
                 </ContactButtonDiv >   
                 </SocialIconslia>
             </ContactButton>
-            </Bounce>
-            </Roll>
-        </TextZone>
-        <ScrollDown key="ScrollDown">
-            <ScrollDownSpan key="ScrollDownSpan">scroll down</ScrollDownSpan>
-            <FontAwesomeIcon icon={faArrowDown} style={{transform: "rotate(270deg)",marginLeft: "15px"}}/>
-        </ScrollDown>
+            </TextZone>
+       
+        
         <ScrollDownLeft key="ScrollDownLeft">
             <ScrollDownSpan key="ScrollDownSpan2" >scroll down</ScrollDownSpan>
             <FontAwesomeIcon icon={faArrowDown} style={{transform: "rotate(270deg)", marginLeft: "15px"}}/>

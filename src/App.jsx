@@ -8,7 +8,7 @@ import Contact from "./component/Contact/Contact";
 import Works from "./component/works/Works";
 import Home from "./pages/home/Home";
 import ClickCare from "./pages/projects/clickCare/ClickCare";
-import Prueba2 from "./Prueba2";
+import Setting from "./Setting";
 
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/projects" element={<Works/>}/>
       <Route path="/projects/clickcare" element={<ClickCare/>}/>
-      <Route path="/prueba2" element={<Prueba2/>}/>
+      <Route path="/setting" element={<Setting/>}/>
     </Routes>
   );
 };

@@ -1,8 +1,8 @@
 import React from 'react'
 import m from "./Mlleter.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {} from "@fortawesome/free-solid-svg-icons"
-import {faLinkedin, faGithub, faHtml5} from"@fortawesome/free-brands-svg-icons"
+import {faGear} from "@fortawesome/free-solid-svg-icons"
+import {faLinkedin, faGithub} from"@fortawesome/free-brands-svg-icons"
 import { useRef } from 'react'
 import styled,{ keyframes } from "styled-components";
 import { greatView } from "../../responsive.js";
@@ -12,6 +12,13 @@ import { useDispatch, useSelector} from "react-redux";
 
 export default function SideBar({sideNav}) {
 const color= useSelector((state)=>state.color)
+const letraAzul= "https://ucarecdn.com/b1725547-880b-4c7c-87f0-8cd69a1be26c/letraMazulverdad.png"
+const letraVioleta = "https://ucarecdn.com/5f6f870a-9624-481b-b57d-20e2436b3d82/letramVioleta.png"
+const letraNaranja = "https://ucarecdn.com/472c9064-a09c-45f6-9db2-c9fe17cbe9a1/letramnaranja.png"
+const letraVerde= "https://ucarecdn.com/22791674-57d2-4db0-8a07-ef7830ba8ff4/letramverde.png"
+const letraRoja="https://ucarecdn.com/6e6b62b3-7462-4e8c-9dc5-fbb2ce760c6f/letramroja.png"
+const letraVerdeFluor="https://ucarecdn.com/6ea30276-ce41-462c-84c8-8b60a1c422db/letraverdefluor.png"
+const letraOriginal="https://ucarecdn.com/22794b69-fdb7-4fd7-86a0-f25e687d0b04/letramoriginal.png"
 const Father=styled.div`
   position: relative;
   width: 100%;
@@ -44,7 +51,7 @@ const LogoSection=styled.div`
   align-items: center;
   flex-direction: column;
   background-color: black;
-  color: white;
+  color: ${color};
   ${greatView({height: "25vh"})}
 `
 const Logo=styled.a`
@@ -60,11 +67,11 @@ const LogoImg=styled.img`
 `
 const LogoSpan1=styled.span`
   font-size:  1.7rem;
-  color: white;
+  color: ${color};
 `
 const LogoSpan2=styled.span`
   font-size:  1.7rem;
-  color: white;
+  color: ${color};
   margin-top: 25px;
   font-size: 17px;
   font-family: 'Times New Roman' Times, serif;
@@ -212,7 +219,9 @@ const SocialIconslia=styled.a`
             <LogoSection>
               <AnimationSpanLogo></AnimationSpanLogo>
                  <Logo href="/">
-                    <LogoImg src={m} alt="" />
+                    <LogoImg src={color === "#3498db"? letraAzul : color === "#3200ff" ? letraVioleta : 
+        color === "#fa6001" ? letraNaranja : color === "#00ee39" ? letraVerde : color === "#f40000" ? 
+        letraRoja : color === "#00f7b5" ? letraVerdeFluor : letraOriginal}  alt="" />
                     <LogoSpan1>Matielota</LogoSpan1>
                  </Logo>
                 <LogoSpan2 className='profession'>Full Stack Developer</LogoSpan2>

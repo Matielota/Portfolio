@@ -9,26 +9,7 @@
     position: relative;
     
 }
-.contact-section::before{
-    content: '<form>';
-    position: absolute;
-    top: 0px;
-    left: 5px;
-    font-size: 2rem;
-    font-family: 'La Belle Aurore', cursive;
-    color: #666565;
-    letter-spacing: 3px;
-}
-.contact-section::after{
-    content: '</form>';
-    position: absolute;
-    bottom: -50px;
-    left: 5px;
-    font-size: 2rem;
-    font-family: 'La Belle Aurore', cursive;
-    color: #666565;
-    letter-spacing: 3px;
-}
+
 
 .contact-heading{
     margin-bottom: 30px;

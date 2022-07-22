@@ -10,6 +10,22 @@ import styled,{ keyframes } from "styled-components";
 import { greatView } from "../../responsive.js";
 import { useDispatch, useSelector} from "react-redux";
 
+const ContactSection=styled.div`
+  width: 100%;
+  margin-bottom: 100px;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  position: relative;
+` 
+const ContactHeading=styled.div`
+  margin-bottom: 30px;
+  position: relative;
+`
+
+
 export default function Contact() {
   const color= useSelector((state)=>state.color)
   const ContactButtonDiv= styled.div`
@@ -68,9 +84,74 @@ const ContactButtonText=styled.span`
     &:hover ${ContactButtonBg}{width: 110%;}
     &:hover ${ContactButtonText}{color:black;}      
 `  
-  
-  
-
+const style={
+  position: "relative",
+  width: "100%",
+  height: "50px",
+  outline: "none",
+  border: "none",
+  padding: "0 20px",
+  marginBottom: "5px",
+  fontFamily: "sans-serif",
+  fontSize: "0.957rem",
+  boxShadow: "0 0 0px 1000px #2b2b2b inset"
+}
+const style2={
+  position: "relative",
+  width: "100%",
+  height: "25vh",
+  outline: "none",
+  border: "none",
+  padding: "10px 20px",
+  marginBottom: "5px",
+  fontFamily: "sans-serif",
+  fontSize: "0.957rem",
+  boxShadow: "0 0 0px 1000px #2b2b2b inset"
+}
+const FormInputGroupInputSpan=styled.span`
+&:after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-color: #f50057;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s linear;
+`
+const FormInputGroupTextSpan=styled.span`
+&:after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-color: #f50057;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s linear;
+`
+const FormInputGroup=styled.div`
+  width: 100%;
+  position: relative;
+  &:focus{
+    &:${FormInputGroupInputSpan}:after{
+      width: 100%;
+    }
+  }
+`
+const TitleWorkContact=styled.div`
+  width: 100%;
+  font-size: 2rem;
+  color: ${color};
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  &:hover{
+    color: #909096;
+    animation-duration: 3s;
+    animation: animation_hover 3s; 
+  }
+`
   const initialValues = {
     name:"",
     email:"",
@@ -110,12 +191,11 @@ const ContactButtonText=styled.span`
         validationSchema={validationSchema}
         onSubmit={onSubmit}
       >
-      <div className="contact-section contact-wrapper">
+      <ContactSection>
         <Form className='contact-form' >
         
-            <div className="contact-heading">
-            <div className="fake-big-contact" >/Contact</div>
-                <div className="title-work-contact"> 
+            <ContactHeading>
+                <TitleWorkContact> 
                     <h2>
                     <span>C</span>
                     <span>o</span>
@@ -128,12 +208,13 @@ const ContactButtonText=styled.span`
                     <span>m</span>
                     <span>e</span>
                     </h2>
-                </div>
+                </TitleWorkContact>
                 <p>Siempre estoy interesado en nuevos proyectos, cualquier duda o consulta puedes escribirme </p>
-            </div>
+            </ContactHeading>
             <div className="form-input-wrapper">
-                <div className="form-input-group">
+                <FormInputGroup>
                 <Field
+                  style={style}
                   id="name"
                   name="name"
                   type="text"
@@ -141,10 +222,11 @@ const ContactButtonText=styled.span`
                 />
                 <ErrorMessage render={(msg) => msg === "Debes colocar tu nombre" ||  msg === "Elimine los espacios"
                 ? <div className="error">{msg}</div>:null}  name="name"/>
-                  <span></span>
-                </div> 
-                <div className="form-input-group">
+                  <FormInputGroupInputSpan></FormInputGroupInputSpan>
+                </FormInputGroup> 
+                <FormInputGroup>
                 <Field
+                  style={style}
                   id="email"
                   name="email"
                   type="text"
@@ -152,20 +234,22 @@ const ContactButtonText=styled.span`
                 />
                 <ErrorMessage render={(msg) => msg === "Es necesario llenar este campo" || msg === "El email no es válido"  ||  msg === "Elimine los espacios"
                 ? <div className="error">{msg}</div>:null} name="email"/>
-                  <span></span>
-                </div> 
-                <div className="form-input-group">
+                  <FormInputGroupInputSpan></FormInputGroupInputSpan>
+                </FormInputGroup> 
+                <FormInputGroup>
                 <Field
+                  style={style}
                   id="subject"
                   name="subject"
                   type="text"
                   placeholder="subject"
                 />
                 
-                  <span></span>
-                </div> 
-                <div className="form-input-group ">
+                  <FormInputGroupInputSpan></FormInputGroupInputSpan>
+                </FormInputGroup> 
+                <FormInputGroup>
                 <Field
+                  style={style2}
                   as="textarea"
                   id="message"
                   name="message"
@@ -174,8 +258,8 @@ const ContactButtonText=styled.span`
                 />
                 <ErrorMessage render={(msg) => msg === "Es necesario llenar este campo" ||  msg === "Elimine los espacios"
                 ? <div className="error">{msg}</div>:null} name="message"/>
-                  <span></span>
-                </div>
+                  <FormInputGroupTextSpan></FormInputGroupTextSpan>
+                </FormInputGroup>
                 <div className="message-confirmation"></div>
                 <ContactButton key="ContactButton" type="submit" onSubmit={onSubmit}>
                       <ContactButtonDiv key="ContactButtonDiv">
@@ -189,7 +273,7 @@ const ContactButtonText=styled.span`
             
             </Form>
         
-      </div>
+      </ContactSection>
       </Formik>
     </div>
   )

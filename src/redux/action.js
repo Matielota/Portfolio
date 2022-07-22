@@ -8,5 +8,16 @@ export function setColor(values){
             })
         }catch{}
     }
+}
+
+export function setSettings(values){
+    return async function(dispatch){
+        try{
+            return dispatch({
+                type:"SET_SETTINGS",
+                payload: values
+            })
+        }catch{}
+    }
 
 }

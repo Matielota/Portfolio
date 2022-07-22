@@ -12,18 +12,24 @@ import About from '../../component/about/About'
 import Contact from "../../component/Contact/Contact"
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import styled,{ keyframes } from "styled-components";
+import styled from "styled-components";
 import { greatView } from "../../responsive";
 import { useDispatch, useSelector } from 'react-redux'
-import {setColor} from "../../redux/action"
+import {setColor,setSettings} from "../../redux/action"
+import Setting from '../../Setting'
 
+import {faGear} from "@fortawesome/free-solid-svg-icons"
 
 export default function Home() {
   const dispatch=useDispatch()
 const color= useSelector((state)=>state.color)
+const config= useSelector((state)=>state.setting)
+console.log(config)
+
 const onClick = (value)=>{
   dispatch(setColor(value))
 }
+
 const FirstComponent=styled.div`
   position: relative;
   &:after{
@@ -90,10 +96,31 @@ const ButtonsContainer=styled.div`
   display:block;
   ${greatView({display:"none"})}
 `
-const Times=styled.div`
-  display:block
-`
 
+const SettingContainer=styled.div`
+    position: fixed;
+    bottom:100px;
+    right:100px;
+    background-color: beige;
+    height:10vh;
+    widht:10vh;
+    &:hover{
+      color:red;
+    }
+`
+const SocialIconslia=styled.div`
+bottom:20px; 
+right:20px; 
+position:fixed;
+width: 50px;
+font-size: 3rem;
+text-decoration: none;
+z-index:10;
+  color:${color};
+  &:hover{
+    color:#909096;
+}
+` 
 
   const particlesInit = async (main) => {
     await loadFull(main);
@@ -134,12 +161,17 @@ function handleMenu(){
   if(menuDisplay === "open"){
     setStateNav(menuDisplay)
   } else if(menuDisplay === "close"){
-    setStateNav(menuDisplay)
-    
+    setStateNav(menuDisplay)  }
 }
+console.log(config)
+const settings=(value)=>{
+  dispatch(setSettings(value))
+  console.log(config)
 }
-
-
+function click(e){
+  dispatch(setSettings(e))
+  console.log(config)
+}
 
 return (
     <div className='containerAll'>
@@ -184,7 +216,7 @@ return (
             color: color,
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.3,
             width: 1,
           },
           collisions: {
@@ -208,7 +240,7 @@ return (
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: 0.3,
           },
           shape: {
             type: "circle",
@@ -224,6 +256,11 @@ return (
 
     </Particles>
     <FirstComponent>
+    
+
+        <SocialIconslia onClick={()=>settings("open")}>
+            <FontAwesomeIcon icon={faGear} />
+        </SocialIconslia>
        <SoundContainer>
           <Soundid>
               <FontAwesomeIcon icon={faSoundcloud} style={{fontSize: "2rem",margin: "7px",color: "#08fdd8"}} ref={soundCloudAudio}/>
@@ -236,7 +273,10 @@ return (
           <ButtonsContainer>
               <FontAwesomeIcon icon={faBars}  className="bars" ref={barsIcon} onClick={handleMenu}/>
           </ButtonsContainer>
+          
         </SoundContainer>
+        {config === "open"?<Setting style={{position: "fixed",bottom:"80px",right:"30px"}}/>:null}
+       
         
         {stateNav==="open"? <SideBar sideNav={stateNav}/> : <SideBar sideNav={stateNav}/>}
         <TextHome></TextHome>

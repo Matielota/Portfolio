@@ -4,8 +4,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import styled,{ keyframes } from "styled-components";
 import { useSelector} from "react-redux";
 import { greatView } from './responsive';
-import { SiMongodb,SiTypescript,SiJquery,SiPostgresql,SiMysql,SiAmazonaws,SiGitlab,SiStyledcomponents,SiFirebase } from 'react-icons/si';
-
+import { SiMongodb,SiTypescript,SiJquery,SiPostgresql,SiMysql,SiAmazonaws,SiGitlab,SiStyledcomponents,SiFirebase,SiJsonwebtokens,SiSocketdotio ,SiRedux} from 'react-icons/si';
+import { TbBrandReactNative} from 'react-icons/tb';
 export default function Probando() {
     const color= useSelector((state)=>state.color)
 
@@ -26,7 +26,9 @@ const Rotate2 =keyframes `
     100%{transform: rotate(0deg)}
 `
 const SocialIcons=styled.div`
-    height:100vh;
+    margin: 3% 0 0 10%;
+    height:660px;
+    width:660px;
     position: relative;
     list-style: none;
     display: flex;
@@ -35,95 +37,196 @@ const SocialIcons=styled.div`
     display:none;
     ${greatView({display:"block"})}
      animation: ${Rotate} 35s ease-in-out 1s infinite alternate-reverse;
-    -webkit-animation: ${Rotate} 60s ease-in-out 1s infinite ;
-    -o-animation: ${Rotate} 60s ease-in-out 1s infinite ;
+    -webkit-animation: ${Rotate} 35s ease-in-out 1s infinite alternate-reverse ;
+    -o-animation: ${Rotate} 35s ease-in-out 1s infinite alternate-reverse ;
 `
 const SocialIconsli=styled.div`
     width: 50px;
     font-size: 5rem;
 `
-const SocialIconslia=styled.a`
+const SocialIconslia=styled.p`
     position:absolute;
     text-decoration: none;
     color:${color};
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
     display: inline-block;
     animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse;
-    -webkit-animation: ${Rotate2} 60s ease-in-out 1s infinite ;
-    -o-animation: ${Rotate2} 60s ease-in-out 1s infinite ;
+    -webkit-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ;
+    -o-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ; 
     &:hover{
     color:#909096;}
 ` 
-
+const SocialIconsliSkill=styled.p`
+    position:absolute;
+    text-decoration: none;
+    color:${color};
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    display: inline-block;
+    transform: rotate(315deg);
+     animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse;
+    -webkit-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ;
+    -o-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ; 
+    &:hover{
+    color:#909096;}
+` 
+const SocialIconsliChange=styled.p`
+    position:absolute;
+    text-decoration: none;
+    color:${color};
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    display: inline-block;
+    transform: rotate(315deg);
+     animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse;
+    -webkit-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ;
+    -o-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ; 
+    &:hover{
+    color:#909096;}
+` 
+const SocialIconslire=styled.p`
+    position:absolute;
+    text-decoration: none;
+    color:${color};
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    display: inline-block;
+    transform: rotate(45deg);
+     animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse;
+    -webkit-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ;
+    -o-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ; 
+    &:hover{
+    color:#909096;}
+` 
+const SocialIconsliEm=styled.p`
+    position:absolute;
+    text-decoration: none;
+    color:${color};
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    display: inline-block;
+    transform: rotate(45deg);
+     animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse;
+    -webkit-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ;
+    -o-animation: ${Rotate2} 35s ease-in-out 1s infinite alternate-reverse ; 
+    &:hover{
+    color:#909096;}
+` 
+const Rotate3 =keyframes `
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+`
+const SocialIconsliPuedenGirar=styled.p`
+    position:absolute;
+    text-decoration: none;
+    color:${color};
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    display: inline-block;
+    transform: rotate(45deg);
+     animation: ${Rotate3} 5s ease-in-out 1s infinite ;
+    -webkit-animation: ${Rotate3} 5s ease-in-out 1s infinite  ;
+    -o-animation: ${Rotate3} 5s ease-in-out 1s infinite ; 
+    &:hover{
+    color:#909096;}
+` 
   return (
     <div>
+        
         <SocialIcons>
-            <SocialIconslia style={{right:"35%", top: "42%", fontSize: "5rem",}}>
-            <p>
-            AGILE
-            <br />
+            
+            <SocialIconslia style={{left:"270px", top: "340px", fontSize: "3.5rem"}}>
             SCRUM  
-            </p>
             </SocialIconslia>
+
+            <SocialIconsliSkill style={{left:"-30px", top: "100px", fontSize: "2rem"}}>
+            Work Team
+            </SocialIconsliSkill>
+            <SocialIconsliChange style={{right:"-100px", top: "580px", fontSize: "2rem"}}>
+            Resolution
+            </SocialIconsliChange>
+            <SocialIconslire style={{right:"-70px", top: "120px", fontSize: "2rem"}}>
+            Resilience
+            </SocialIconslire>
+            <SocialIconsliEm style={{left:"20px", bottom: "30px", fontSize: "2rem"}}>
+            Empathy
+            </SocialIconsliEm>
+            {/* //base del cuadro */}
             <SocialIconsli>
-            <SocialIconslia style={{right:"48%",top: "16%"}}>
+            <SocialIconslia style={{left:"0",top: "324px"}}>
                 <FontAwesomeIcon icon={faHtml5} />
             </SocialIconslia>
-            <SocialIconslia style={{left:"38%", top: "22%"}}>
-                <SiMysql/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{right:"38%", top: "22%"}}>
+            <SocialIconslia style={{left:"324px", top: "0"}}>
                 <SiGitlab/>
-                </SocialIconslia>
-            <SocialIconslia style={{left:"31%", top: "30%"}}>
-                <FontAwesomeIcon icon={faReact} />
-                </SocialIconslia>
-                <SocialIconslia style={{right:"31%", top: "30%"}}>
-                <FontAwesomeIcon icon={faNodeJs}/>
-                </SocialIconslia>
-                <SocialIconslia style={{left:"25%", top: "40%"}}>
-                 <FontAwesomeIcon icon={faCss3}   />
-                </SocialIconslia>
-                <SocialIconslia style={{right:"25%", top: "40%"}}>
-                <SiStyledcomponents/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{left:"18%", top: "49%"}}>
-                <FontAwesomeIcon icon={faSass}/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{right:"18%", top: "49%"}}>
-                <SiJquery/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{left:"25%", top: "58%"}}>
-                <FontAwesomeIcon icon={faPython}/>
-                </SocialIconslia> 
-
-                <SocialIconslia style={{right:"25%", top: "58%"}}>
-                <SiAmazonaws/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{left:"31%", top: "68%"}}>
-                <SiMongodb/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{right:"31%", top: "68%"}}>
-                <SiPostgresql/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{left:"40%", top: "76%"}}>
-                <FontAwesomeIcon icon={faBootstrap}/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{right:"40%", top: "76%"}}>
-                <SiFirebase/>
-                </SocialIconslia>
-
-                <SocialIconslia style={{right:"46%", top: "84%"}}>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"648px", top: "324px"}}>
                 <SiTypescript/>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"324px", top: "648px"}}>
+            <SiSocketdotio/>
                 </SocialIconslia>
-    </SocialIconsli>
+
+            {/* top/left del cuadro */}
+            <SocialIconslia style={{left:"160px", top: "80px"}}>
+                <FontAwesomeIcon icon={faNodeJs}/>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"60px", top: "190px"}}>
+                <FontAwesomeIcon icon={faCss3}   />
+            </SocialIconslia>
+            {/* bot/left del cuadro */}
+            <SocialIconslia style={{left:"160px", top: "568px"}}>
+                <SiStyledcomponents/>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"60px", top: "458px"}}>
+                <FontAwesomeIcon icon={faSass}/>
+            </SocialIconslia>
+            {/* bot/right del cuadro */}
+            <SocialIconslia style={{left:"488px", top: "568px"}}>
+                <SiJquery/>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"588px", top: "458px"}}>
+                <FontAwesomeIcon icon={faPython}/>
+            </SocialIconslia> 
+            {/* top/right del cuadro */}
+            <SocialIconslia style={{left:"488px", top: "80px"}}>
+                <SiAmazonaws/>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"588px", top: "190px"}}>
+                <SiMongodb/>
+            </SocialIconslia>
+            {/* base dentro del cuadro */}
+            <SocialIconslia style={{left:"110px", top: "324px"}}>
+                <SiPostgresql/>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"538px", top: "324px"}}>
+                <FontAwesomeIcon icon={faBootstrap}/>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"324px", top: "110px"}}>
+                <SiFirebase/>
+            </SocialIconslia>
+            <SocialIconslia style={{left:"324px", top: "538px"}}>
+                <SiMysql/>
+            </SocialIconslia>
+            <SocialIconsliPuedenGirar style={{left:"170px",top: "190px"}}>
+                <SiJsonwebtokens/>
+            </SocialIconsliPuedenGirar>
+            <SocialIconsliPuedenGirar style={{left:"478px",top: "458px"}}>
+            <FontAwesomeIcon icon={faReact} />
+            </SocialIconsliPuedenGirar>
+            <SocialIconsliPuedenGirar style={{left:"478px",top: "190px"}}>
+                <SiRedux/>
+            </SocialIconsliPuedenGirar>
+            <SocialIconsliPuedenGirar style={{left:"170px",top: "458px"}}>
+                <TbBrandReactNative/>
+            </SocialIconsliPuedenGirar>
+            </SocialIconsli>
         </SocialIcons>
     </div>
   )
