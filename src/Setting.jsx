@@ -13,7 +13,7 @@ const color= useSelector((state)=>state.color)
 const SettingContainer=styled.div`
     position: fixed;
     bottom:80px;
-    right:100px;
+    right:30px;
     height:48vh;
     width:6vh;
     z-index:20;
@@ -23,9 +23,9 @@ const SettingContainer=styled.div`
     outline: 2px solid ${color};
 `
 const Title=styled.p`
-margin-left:2px;
+margin-left:5px;
 font-size:1.2rem;
-margin-bottom:5px;
+ margin-bottom:5px;
 color:white;
 `
 const Colores=styled.button`
@@ -39,7 +39,7 @@ const Colores=styled.button`
 const Colores2=styled.button`
   position:fixed;
   bottom:85px;
-  right:108px;
+  right:38px;
   border-radius:50%;
   height:40px;
   width:40px;

@@ -125,7 +125,7 @@ const ProjectContainer=styled.div`
     <WorkContainer id="WorkContainer">
       <SectionWork id="WorkContainer2">
             <HeaderWork id="WorkContainer3">
-            <Slide direction={"right"} delay={200} cascade={true}  >
+            
                 <TitleWork id="WorkContainer4">
                   <AnimationWork id="WorkContainer5">M</AnimationWork>
                   <AnimationWork id="WorkContainer6">i</AnimationWork>
@@ -141,7 +141,7 @@ const ProjectContainer=styled.div`
                   <AnimationWork id="WorkContainer16">i</AnimationWork>
                   <AnimationWork id="WorkContainer17">o</AnimationWork>  
                 </TitleWork>
-              </Slide>
+              
             </HeaderWork>
         <TextZoneWork id="WorkContainer18">
                 <TextZoneWorkp id="WorkContainer19"> 

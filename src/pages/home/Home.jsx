@@ -19,6 +19,7 @@ import {setColor,setSettings} from "../../redux/action"
 import Setting from '../../Setting'
 
 import {faGear} from "@fortawesome/free-solid-svg-icons"
+import { Callbacks } from 'jquery'
 
 export default function Home() {
   const dispatch=useDispatch()
@@ -32,10 +33,11 @@ const onClick = (value)=>{
 
 const FirstComponent=styled.div`
   position: relative;
+  max-width: fit-content;
 }
 `
 const SoundContainer=styled.header`
-  width: 95%;
+  width: 98%;
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -89,7 +91,7 @@ const SettingContainer=styled.div`
 `
 const SocialIconslia=styled.div`
 bottom:20px; 
-right:100px; 
+right:30px; 
 position:fixed;
 width: 50px;
 font-size: 3rem;
@@ -100,6 +102,9 @@ z-index:10;
     color:#909096;
 }
 ` 
+const ContainerAll=styled.div`
+${greatView({width:"90%"})}
+`
 
   const particlesInit = async (main) => {
     await loadFull(main);
@@ -153,7 +158,7 @@ function click(e){
 }
 
 return (
-    <div className='containerAll'>
+    <ContainerAll>
       <Particles
       id="tsparticles"
       init={particlesInit}
@@ -263,6 +268,6 @@ return (
         <About></About>
         <Contact></Contact>
     </FirstComponent>
-    </div>
+    </ContainerAll>
   )
 }
