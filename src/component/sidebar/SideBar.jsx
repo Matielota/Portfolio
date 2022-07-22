@@ -1,53 +1,246 @@
 import React from 'react'
-import "./sidebar.css"
-import { Link } from 'react-router-dom' 
 import m from "./Mlleter.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {} from "@fortawesome/free-solid-svg-icons"
-import {faLinkedin, faGithub} from"@fortawesome/free-brands-svg-icons"
+import {faLinkedin, faGithub, faHtml5} from"@fortawesome/free-brands-svg-icons"
 import { useRef } from 'react'
-
+import styled,{ keyframes } from "styled-components";
+import { greatView } from "../../responsive.js";
+import { useDispatch, useSelector} from "react-redux";
 
 
 
 export default function SideBar({sideNav}) {
+const color= useSelector((state)=>state.color)
+const Father=styled.div`
+  position: relative;
+  width: 100%;
+  background-color: black;
+`
+const Aside=styled.aside`
+  width: 100%;
+  height: 0;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index:1;
+  overflow:hidden; 
+  background-color: black;
+  ${greatView({width: "10%", height: "100%"})}
+`
+const AsideWrapper=styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  ${greatView({height: "80%"})}
+`
+const LogoSection=styled.div`
+  min-height: 32vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  ${greatView({height: "25vh"})}
+`
+const Logo=styled.a`
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  background-color: transparent;
+`
+const LogoImg=styled.img`
+  width: 150px;
+  height: auto;
+  border: none;
+`
+const LogoSpan1=styled.span`
+  font-size:  1.7rem;
+  color: white;
+`
+const LogoSpan2=styled.span`
+  font-size:  1.7rem;
+  color: white;
+  margin-top: 25px;
+  font-size: 17px;
+  font-family: 'Times New Roman' Times, serif;
+  ${greatView({marginLeft: "20px",marginBottom: "30px"})}
+`
+const AnimateFather=styled.div`
+  position:relative;
+`
+const NavLinksa=styled.a`
+  position:relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  line-height: 3rem;
+  text-decoration: none;
+  color: rgb(123, 119, 119);
+  &:hover{
+    color: ${color}
+}
+`
+const Animate1= keyframes`
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+`
+const Animate2= keyframes`
+  0%{
+      left: 100%;
+  }
+  50%,100%{
+      left: -100%;
+  }
+`
+const AnimationSpan=styled.span`
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,${color});
+    animation: ${Animate1} 1s linear infinite;
+`
+const AnimationSpan2=styled.span`
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,${color});
+    animation: ${Animate2} 1s linear infinite;
+`
+const AnimationSpan3=styled.span`
+    position: absolute;
+    display: block;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,${color});
+    animation: ${Animate1} 1s linear infinite;
+`
+const AnimationSpan4=styled.span`
+    position: absolute;
+    display: block;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,${color});
+    animation: ${Animate2} 1s linear infinite;
+    
+`
+const Animation3= keyframes`
+  0%{
+      top: -100%;
+  }100%{
+      top: 100%;
+  }
+`
+const Animation4= keyframes`
+  0%{
+      top: 100%;
+  }100%{
+      top: -100%;
+  }
+`
+const AnimationSpanLogo=styled.span`
+    transform: rotate(90deg);
+    opacity:0;
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 95px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(180deg,transparent,${color});
+    animation: ${Animation3} 1.5s linear infinite;
+    ${greatView({opacity: "1"})}
+`
+const AnimationSpanLogo2=styled.span`
+    transform: rotate(90deg);
+    opacity:0;
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: -92px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(180deg,transparent,${color});
+    animation: ${Animation4} 1.5s linear infinite;
+    ${greatView({opacity: "1"})}
+`
+const SocialIcons=styled.ul`
+  list-style: none;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+`
+const SocialIconsli=styled.div`
+  width: 50px;
+  font-size: 3rem;
+`
+const SocialIconslia=styled.a`
+  text-decoration: none;
+  color:${color};
+  &:hover{
+    color:#909096;
+}
+` 
   let asideClass = useRef(null)
  
   console.log(sideNav)
   return (
-    <div className='padre'>
-      <aside id="aside" 
-      className='aside' 
+    <Father>
+      <Aside 
       style={(sideNav==="open"? {overflow: "visible", height: "100%"}:null)} 
       ref={asideClass}
       >
-        <div className="asidewrapper">
-            <div className="logo-section">
-                 <a href="/" className='logo'>
-                    <img src={m} alt="" />
-                    <span>Matielota</span>
-                 </a>
-                <span className='profession'>Full Stack Developer</span>
-            </div>
-            <nav className="nav-links">
-            <a href='/about'> Sobre mi:</a>
-            <a href='/projects'> Proyectos</a>
-            <a href='/contact'> Contacto</a>
-            </nav>
-            <ul className='social-icons'>
-                <li>
-                    <a href="https://www.linkedin.com/in/matias-caceres00/">
+        <AsideWrapper>
+            <LogoSection>
+              <AnimationSpanLogo></AnimationSpanLogo>
+                 <Logo href="/">
+                    <LogoImg src={m} alt="" />
+                    <LogoSpan1>Matielota</LogoSpan1>
+                 </Logo>
+                <LogoSpan2 className='profession'>Full Stack Developer</LogoSpan2>
+                <AnimationSpanLogo2></AnimationSpanLogo2>
+            </LogoSection>
+            <AnimateFather >
+            <NavLinksa href='https://www.linkedin.com/in/matias-caceres00/'> Sobre mi:</NavLinksa>
+            <AnimationSpan></AnimationSpan>
+            <NavLinksa href='https://github.com/Matielota'> Proyectos</NavLinksa>
+            <AnimationSpan2></AnimationSpan2>
+            <NavLinksa href='https://www.linkedin.com/in/matias-caceres00/'> Contacto</NavLinksa>
+            <AnimationSpan3></AnimationSpan3>
+            <AnimationSpan4></AnimationSpan4>
+            </AnimateFather>
+            <SocialIcons>
+                <SocialIconsli>
+                    <SocialIconslia href="https://www.linkedin.com/in/matias-caceres00/">
                     <FontAwesomeIcon icon={faLinkedin}  className="social-media"/>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/Matielota">
+                    </SocialIconslia>
+                </SocialIconsli>
+                <SocialIconsli>
+                    <SocialIconslia href="https://github.com/Matielota">
                     <FontAwesomeIcon icon={faGithub}  className="social-media"/>
-                    </a>
-                </li>
-            </ul>
-        </div>
-      </aside>
-    </div>
+                    </SocialIconslia>
+                </SocialIconsli>
+            </SocialIcons>
+        </AsideWrapper>
+      </Aside>
+    </Father>
   )
 }

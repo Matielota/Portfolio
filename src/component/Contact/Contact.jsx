@@ -6,9 +6,68 @@ import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as yup from 'yup';
 import Swal from 'sweetalert2'
 import emailjs from '@emailjs/browser';
+import styled,{ keyframes } from "styled-components";
+import { greatView } from "../../responsive.js";
+import { useDispatch, useSelector} from "react-redux";
 
 export default function Contact() {
-
+  const color= useSelector((state)=>state.color)
+  const ContactButtonDiv= styled.div`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+`
+const ContactButtonBg=styled.span`
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -5px;
+    top:0;
+    transition: all .3s ease-in-out;  
+    background-color: ${color};
+    transform: skewX(-19deg);
+`
+const ContactButtonBase=styled.span`
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    border: 1px solid ${color};
+    box-sizing: border-box;
+`
+const ContactButtonText=styled.span`
+    font-size: 1.6rem;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+    &:hover{
+        color: black;
+    }
+`
+  const ContactButton=styled.button`
+    margin-bottom: 40px;
+    margin-left: 40px;
+    text-decoration: nome;
+    text-align: center;
+    width: 300px;
+    max-width: 350px;
+    height: 60px;
+    display: block;
+    line-height: 40px;
+    letter-spacing: 3px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: ${color};
+    &:hover ${ContactButtonBg}{width: 110%;}
+    &:hover ${ContactButtonText}{color:black;}      
+`  
   
   
 
@@ -118,14 +177,14 @@ export default function Contact() {
                   <span></span>
                 </div>
                 <div className="message-confirmation"></div>
-                <button type="submit" className='contact-button submit-submit' onSubmit={onSubmit}>
-                <div>
-                    <span className='bg'></span>
-                    <span className='base'></span>
-                    <span className='text'> Enviar mensaje</span>
-                </div>    
-            </button>  
- 
+                <ContactButton key="ContactButton" type="submit" onSubmit={onSubmit}>
+                      <ContactButtonDiv key="ContactButtonDiv">
+                      <ContactButtonBg key="ContactButtonBg"></ContactButtonBg>
+                      <ContactButtonBase key="ContactButtonBase"></ContactButtonBase>
+                      <ContactButtonText key="ContactButtonText"> Contactame!</ContactButtonText>
+                </ContactButtonDiv >   
+  
+            </ContactButton>
             </div>
             
             </Form>

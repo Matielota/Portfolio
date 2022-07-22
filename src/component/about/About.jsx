@@ -1,86 +1,94 @@
 import React from 'react'
-import "./about.css";
-import TagCanvas from 'tag-canvas';
-import { blue } from '@material-ui/core/colors';
-import { useRef } from 'react';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import styled,{ keyframes } from "styled-components";
+import { greatView } from "../../responsive.js";
+import { useSelector} from "react-redux";
+import Probando from '../../Probando';
+import Prueba2 from '../../Prueba2.jsx';
 export default function About() {
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
-  const particlesLoaded = (container) => {
-  };
-    let canvasArray= useRef(null)
-    window.onload = function() {
-        try {
-            TagCanvas.reverse = true;
-            TagCanvas.noSelect = "true";
-            TagCanvas.wheelZoom = false;
-            TagCanvas.textColour = "#f50057";
-            TagCanvas.textHeight = 26;
-            TagCanvas.Start('myCanvas');
-         
-        } catch(e) {
-          console.log(e)
-        }
-      };
+const color= useSelector((state)=>state.color)
+const SectionAbout=styled.section`
+    position: relative;
+    margin-top: 100px;
+    
+    
+  
+    ${greatView({marginLeft: "15rem",
+    display: "grid",
+    gridTemplateColumns: "30% 1fr",
+    justifyContent: "center",
+    alignItems: "center"})}
+`
+const Animation_hover=keyframes`
+  0%,   to {transform: translateY(0)}
+  30% {transform: translateY(-30px)}
+  60%{transform: translateX(30px)}
+  100%{transform: translateZ(30px)}
+`
 
+const HeaderAbouth2=styled.h2`
+  top:0px;
+  width:auto;
+  margin-bottom: 60px;
+  font-size: 4rem;
+  color: ${color};
+  margin-bottom: 30px;
+&:hover{
+  color: #909096;
+  animation-duration: 2s;
+  animation: ${Animation_hover} 2s; 
+`
+const TextZoneAbout=styled.div`
+  width: 100%;
+  margin-left: 20px;
+  position: relative;
+  ${greatView({width: "30%"})}`
+
+const TextZoneAboutp=styled.p`
+  line-height: 1.5rem;
+  margin-left:10px;
+  margin-right:10px;
+  ${greatView({width: "600px"})}
+`
+
+
+const Skillscharts=styled.div`
+  position: relative;
+  margin-top:100px;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+`
+const SocialIcons=styled.ul`
+  list-style: none;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+`
   return (
     <div> 
-      <section className="section-about">
-           <div className="text-zone-about">
-                   <div className="header-about">
-                         <h2>Sobre mi:</h2>
-                   </div>
-                   <div className="fake-big-4">/About</div>
-                   <p>
+      <SectionAbout>
+           <TextZoneAbout>
+                   
+                         <HeaderAbouth2>Sobre mi:</HeaderAbouth2>
+                   
+                   <TextZoneAboutp>
                        Desde pequeño veo las cosas desde el punto de vista logico, tal vez por esto es que estudie
                        Matematicas, pues en ese mundo todo se resuelve si haces los procedimientos correctos segun la logica.
                        En este sentido es que me involucre en el mundo tecnologico, estudiando ingeniera de sistemas en donde
                         la logica es lo mas importante. 
-                  </p>
-                  <br/>
-                  <p>
                        Puedo desarrollar proyectos trabajando tanto en el back end, en donde disfruto de llevar las riendas 
                       de la informacion, permitiendo al usuario un flujo correcto en su experiencia.
                        Como asi tambien puedo desarrollarme en el front end me gusta crear sitios que se luzcan, que atraigan 
                      las miradas para que los usuarios sientan que deben visualizar todo el contenido sin perderse de nada. 
                       Es por ello que me encuentro perfeccionando mas y mas mis habilidades para lograr este cometido!
-                  </p>
-                  <br />
-                  <p className='last-p-about'>
                      ¿Lo he logrado contigo?¿Te gustaria llevar tus paginas al proximo nivel trabajando juntos?
-                  </p>
-                  
-            </div>
-            <div className="skills-charts">
-              <div className="fake-big-3">/Skill</div>
-                <div className="myCanvasContainer">
-                     <canvas width="700" height="700" id="myCanvas" ref={canvasArray}>
-                           <ul>
-                              <li><a href="#" target="_blank"> React js</a></li>
-                              <li><a href="#" target="_blank"> Node JS</a></li>
-                              <li><a href="#" target="_blank"> React Native</a></li>
-                              <li><a href="#" target="_blank"> HTML</a></li>
-                              <li><a href="#" target="_blank"> CSS</a></li>
-                              <li><a href="#" target="_blank"> SQL</a></li>
-                              <li><a href="#" target="_blank"> Bootstrap</a></li>
-                              <li><a href="#" target="_blank"> Express</a></li>
-                              <li><a href="#" target="_blank"> Sequelize</a></li>
-                              <li><a href="#" target="_blank"> Mongo DB</a></li>
-                              <li><a href="#" target="_blank"> TypeScript</a></li>
-                              <li><a href="#" target="_blank"> JQuery</a></li>
-                              <li><a href="#" target="_blank"> Git</a></li>
-                              <li><a href="#" target="_blank"> PHYTON</a></li>
-                              <li><a href="#" target="_blank"> ES5/ES6</a></li>
-                   
-                             </ul>
-                      </canvas>
-                </div>
-                
-            </div>
-      </section>
+                  </TextZoneAboutp>
+            </TextZoneAbout>
+            <Skillscharts>
+              <Probando/>
+              <Prueba2/> 
+            </Skillscharts>
+      </SectionAbout>
       </div>
   )
 }

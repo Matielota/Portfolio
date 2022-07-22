@@ -1,5 +1,4 @@
 import React from 'react'
-import "./home.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons"
 import {faSoundcloud} from"@fortawesome/free-brands-svg-icons"
@@ -13,8 +12,89 @@ import About from '../../component/about/About'
 import Contact from "../../component/Contact/Contact"
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import styled,{ keyframes } from "styled-components";
+import { greatView } from "../../responsive";
+import { useDispatch, useSelector } from 'react-redux'
+import {setColor} from "../../redux/action"
+
 
 export default function Home() {
+  const dispatch=useDispatch()
+const color= useSelector((state)=>state.color)
+const onClick = (value)=>{
+  dispatch(setColor(value))
+}
+const FirstComponent=styled.div`
+  position: relative;
+  &:after{
+    content: '<html>';
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    margin-left: 0rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+    ${greatView({top: "50px",left: "200px"})}
+  }&:before{
+  content: '<body>';
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  font-size: 1.2rem;
+  font-family: 'La Belle Aurore', cursive;
+  color: #666565;
+  letter-spacing: 3px;
+  ${greatView({top: "80px",left: "200px"})}
+}
+`
+const SoundContainer=styled.header`
+  width: 95%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  ${greatView({justifyContent: "flex-end"})}
+`
+const Soundid=styled.div`
+  font-size: 2rem;
+  padding: 7px;
+  background-color: #1b1b1b;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+`
+const OnOff=styled.div`
+  cursor: pointer;
+  margin-left: 5px;
+`
+const Off=styled.span`
+  font-size: 2rem;
+  color: ${color};
+  display: none;
+`
+const On=styled.span`
+  font-size: 2rem;
+  color: #08fdd8;
+`
+const ButtonsContainer=styled.div`
+  font-size: 2rem;
+  padding: 10px;
+  background-color: #181818;
+  color: #fff;
+  cursor: pointer;
+  display:block;
+  ${greatView({display:"none"})}
+`
+const Times=styled.div`
+  display:block
+`
+
+
   const particlesInit = async (main) => {
     await loadFull(main);
   };
@@ -32,6 +112,8 @@ export default function Home() {
     audio: new Audio(song),
     isPlaying: false,
   };
+
+  var menuDisplay= "close"
   function soundTrack(soundState){
     if (soundState === "off"){
       onSpan.current.style.display = 'block';
@@ -46,15 +128,13 @@ export default function Home() {
       state.audio.play()
   }
 }
-function handleMenu(navCondition){
-  if(navCondition === "open"){
-    timesIcon.current.style.display = "block"
-    barsIcon.current.style.display = "none"
-    setStateNav(navCondition)
-  } else if(navCondition === 'close'){
-    timesIcon.current.style.display = "none";
-    barsIcon.current.style.display = "block";
-    setStateNav(navCondition)
+function handleMenu(){
+  menuDisplay === "close"? menuDisplay ="open" : menuDisplay="close"
+  console.log(menuDisplay)
+  if(menuDisplay === "open"){
+    setStateNav(menuDisplay)
+  } else if(menuDisplay === "close"){
+    setStateNav(menuDisplay)
     
 }
 }
@@ -98,10 +178,10 @@ return (
         },
         particles: {
           color: {
-            value: "#f50057",
+            value: color,
           },
           links: {
-            color: "#f50057",
+            color: color,
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -143,28 +223,27 @@ return (
       
 
     </Particles>
-    <div className='primero'>
-       <header className='sound-container'>
-          <div id="sound">
-              <FontAwesomeIcon icon={faSoundcloud} className="sound-cloud" ref={soundCloudAudio}/>
+    <FirstComponent>
+       <SoundContainer>
+          <Soundid>
+              <FontAwesomeIcon icon={faSoundcloud} style={{fontSize: "2rem",margin: "7px",color: "#08fdd8"}} ref={soundCloudAudio}/>
               <span>Sound</span>
-              <div className="on-off">
-                <span id="off" onClick={()=>soundTrack("off")} ref={offSpan}>off</span>
-                <span id="on" onClick={()=>soundTrack("on")}ref={onSpan}>on</span>
-              </div>
-          </div>
-          <div className="buttons-container">
-              <FontAwesomeIcon icon={faBars}  className="bars" ref={barsIcon} onClick={()=>handleMenu("open")}/>
-              <FontAwesomeIcon icon={faTimes} className="times" ref={timesIcon} onClick={()=>handleMenu("close")}/>
-          </div>
-        </header>
+              <OnOff>
+                <Off onClick={()=>soundTrack("off")} ref={offSpan}>off</Off>
+                <On  onClick={()=>soundTrack("on")} ref={onSpan}>on</On>
+              </OnOff>
+          </Soundid>
+          <ButtonsContainer>
+              <FontAwesomeIcon icon={faBars}  className="bars" ref={barsIcon} onClick={handleMenu}/>
+          </ButtonsContainer>
+        </SoundContainer>
         
         {stateNav==="open"? <SideBar sideNav={stateNav}/> : <SideBar sideNav={stateNav}/>}
         <TextHome></TextHome>
         <Works></Works>
         <About></About>
         <Contact></Contact>
-    </div>
+    </FirstComponent>
     </div>
   )
 }
