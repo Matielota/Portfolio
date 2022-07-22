@@ -19,7 +19,6 @@ import {setColor,setSettings} from "../../redux/action"
 import Setting from '../../Setting'
 
 import {faGear} from "@fortawesome/free-solid-svg-icons"
-import { Callbacks } from 'jquery'
 
 export default function Home() {
   const dispatch=useDispatch()
