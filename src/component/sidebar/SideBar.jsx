@@ -230,7 +230,7 @@ const SocialIconslia=styled.a`
             <AnimateFather >
             <NavLinksa href='https://www.linkedin.com/in/matias-caceres00/'> Sobre mi:</NavLinksa>
             <AnimationSpan></AnimationSpan>
-            <NavLinksa href='https://github.com/Matielota'> Proyectos</NavLinksa>
+            <NavLinksa href='/projects'> Proyectos</NavLinksa>
             <AnimationSpan2></AnimationSpan2>
             <NavLinksa href='https://www.linkedin.com/in/matias-caceres00/'> Contacto</NavLinksa>
             <AnimationSpan3></AnimationSpan3>
