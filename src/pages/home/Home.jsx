@@ -32,27 +32,6 @@ const onClick = (value)=>{
 
 const FirstComponent=styled.div`
   position: relative;
-  &:after{
-    content: '<html>';
-    position: absolute;
-    top: 20px;
-    left: 10px;
-    margin-left: 0rem;
-    font-size: 1.2rem;
-    font-family: 'La Belle Aurore', cursive;
-    color: #666565;
-    letter-spacing: 3px;
-    ${greatView({top: "50px",left: "200px"})}
-  }&:before{
-  content: '<body>';
-  position: absolute;
-  top: 90px;
-  left: 10px;
-  font-size: 1.2rem;
-  font-family: 'La Belle Aurore', cursive;
-  color: #666565;
-  letter-spacing: 3px;
-  ${greatView({top: "80px",left: "200px"})}
 }
 `
 const SoundContainer=styled.header`
