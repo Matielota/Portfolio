@@ -13,7 +13,7 @@ const color= useSelector((state)=>state.color)
 const SettingContainer=styled.div`
     position: fixed;
     bottom:80px;
-    right:30px;
+    right:100px;
     height:48vh;
     width:6vh;
     z-index:20;
@@ -39,7 +39,7 @@ const Colores=styled.button`
 const Colores2=styled.button`
   position:fixed;
   bottom:85px;
-  right:38px;
+  right:108px;
   border-radius:50%;
   height:40px;
   width:40px;

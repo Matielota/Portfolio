@@ -89,7 +89,7 @@ const SettingContainer=styled.div`
 `
 const SocialIconslia=styled.div`
 bottom:20px; 
-right:20px; 
+right:100px; 
 position:fixed;
 width: 50px;
 font-size: 3rem;
@@ -254,7 +254,7 @@ return (
           </ButtonsContainer>
           
         </SoundContainer>
-        {config === "open"?<Setting style={{position: "fixed",bottom:"80px",right:"30px"}}/>:null}
+        {config === "open"?<Setting />:null}
        
         
         {stateNav==="open"? <SideBar sideNav={stateNav}/> : <SideBar sideNav={stateNav}/>}
