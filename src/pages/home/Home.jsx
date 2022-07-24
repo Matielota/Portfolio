@@ -94,12 +94,14 @@ right:30px;
 position:fixed;
 width: 50px;
 font-size: 3rem;
+display:block;
 text-decoration: none;
 z-index:10;
   color:${color};
   &:hover{
     color:#909096;
 }
+${greatView({display:"none"})}
 ` 
 const ContainerAll=styled.div`
 ${greatView({width:"90%"})}
@@ -146,7 +148,7 @@ function handleMenu(){
   } else if(menuDisplay === "close"){
     setStateNav(menuDisplay)  }
 }
-console.log(config)
+
 const settings=(value)=>{
   dispatch(setSettings(value))
   console.log(config)
