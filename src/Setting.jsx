@@ -22,7 +22,7 @@ const SettingContainer=styled.div`
     z-index:-5;
     background-color: rgb(29, 29, 29);
     outline: 2px solid ${color};
-    ${greatView({display:none,zIndex:"20", opacity:1})}
+    ${greatView({display:"none",zIndex:"20", opacity:1})}
 `
 const Title=styled.p`
 margin-left:5px;
