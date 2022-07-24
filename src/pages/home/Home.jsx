@@ -97,11 +97,12 @@ font-size: 3rem;
 display:block;
 text-decoration: none;
 z-index:10;
-  color:${color};
-  &:hover{
+color:${color};
+${greatView({display:"none"})}
+&:hover{
     color:#909096;
 }
-${greatView({display:"none"})}
+
 ` 
 const ContainerAll=styled.div`
 ${greatView({width:"90%"})}
