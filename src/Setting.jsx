@@ -16,12 +16,13 @@ const SettingContainer=styled.div`
     right:30px;
     height:48vh;
     width:6vh;
-    z-index:20;
     border-radius:5px;
-    display:block
+    display:block;
+    opacity:0;
+    z-index:-5;
     background-color: rgb(29, 29, 29);
     outline: 2px solid ${color};
-    ${greatView({display:none})}
+    ${greatView({display:none,zIndex:"20", opacity:1})}
 `
 const Title=styled.p`
 margin-left:5px;
