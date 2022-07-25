@@ -14,7 +14,7 @@ const SettingContainer=styled.div`
     position: fixed;
     bottom:80px;
     right:30px;
-    height:500px;
+    height:300px;
     width:40px;
     border-radius:5px;
     opacity:0;
@@ -55,7 +55,6 @@ const onClose=(value)=>{
   }
   return (
     <SettingContainer>
-    <Title>Color</Title>
     <Colores style={{backgroundColor: "#3498db"}} onClick={()=>onClick("#3498db")}></Colores>
     <Colores style={{backgroundColor: "#3200ff"}} onClick={()=>onClick("#3200ff")}></Colores>
     <Colores style={{backgroundColor: "#fa6001"}} onClick={()=>onClick("#fa6001")}></Colores>
