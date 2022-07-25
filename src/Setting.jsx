@@ -17,11 +17,10 @@ const SettingContainer=styled.div`
     height:300px;
     width:40px;
     border-radius:5px;
-    opacity:0;
-    z-index:-5;
+    opacity:1;
+    z-index:20;
     background-color: rgb(29, 29, 29);
     outline: 2px solid ${color};
-    ${greatView({zIndex:20, opacity:1})}
 `
 const Title=styled.p`
 margin-left:5px;
