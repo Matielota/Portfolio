@@ -8,8 +8,9 @@ import styled,{ keyframes } from "styled-components";
 import { greatView } from "../../responsive.js";
 import { useDispatch, useSelector} from "react-redux";
 import curriculum from "./CurriculumCaceresAldanaMatias.pdf"
+import english from "./englishversion.pdf"
 import axios from 'axios'
-
+import {} from 'react-icons/si'
 
 export default function SideBar({sideNav}) {
 const color= useSelector((state)=>state.color)
@@ -228,11 +229,11 @@ const SocialIconslia=styled.a`
                 <AnimationSpanLogo2></AnimationSpanLogo2>
             </LogoSection>
             <AnimateFather >
-            <NavLinksa href={curriculum} target="_blank" rel="noopener noreferrer" download="Curriculum Caceres Aldana Matias"> Curriculum:</NavLinksa>
+            <NavLinksa href={curriculum} target="_blank" rel="noopener noreferrer" download="Curriculum Caceres Aldana Matias"> Curriculum español</NavLinksa>
             <AnimationSpan></AnimationSpan>
-            <NavLinksa href='/projects'> Proyectos</NavLinksa>
+            <NavLinksa href={english} target="_blank" rel="noopener noreferrer" download="Curriculum Caceres Aldana Matias"> Curriculum English</NavLinksa>
             <AnimationSpan2></AnimationSpan2>
-            <NavLinksa href='https://www.linkedin.com/in/matias-caceres00/'> Contacto</NavLinksa>
+            <NavLinksa href='https://www.linkedin.com/in/matias-caceres00/'> Proyectos</NavLinksa>
             <AnimationSpan3></AnimationSpan3>
             <AnimationSpan4></AnimationSpan4>
             </AnimateFather>
