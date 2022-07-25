@@ -96,7 +96,7 @@ width: 50px;
 font-size: 3rem;
 opacity:0;
 text-decoration: none;
-z-index:0;
+z-index:-5;
 color:${color};
 ${greatView({zIndex:10, opacity:1})}
 &:hover{

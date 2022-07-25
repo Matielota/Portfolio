@@ -17,7 +17,6 @@ const SettingContainer=styled.div`
     height:48vh;
     width:6vh;
     border-radius:5px;
-    display:block;
     opacity:0;
     z-index:-5;
     background-color: rgb(29, 29, 29);
