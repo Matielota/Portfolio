@@ -94,11 +94,11 @@ right:30px;
 position:fixed;
 width: 50px;
 font-size: 3rem;
-display:block;
+opacity:0;
 text-decoration: none;
-z-index:10;
+z-index:0;
 color:${color};
-${greatView({display:"none"})}
+${greatView({zIndex:10, opacity:1})}
 &:hover{
     color:#909096;
 }
