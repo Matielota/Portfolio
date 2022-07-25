@@ -191,7 +191,7 @@ const TitleWorkContact=styled.div`
         validationSchema={validationSchema}
         onSubmit={onSubmit}
       >
-      <ContactSection>
+      <ContactSection id='contactos'>
         <Form className='contact-form' >
         
             <ContactHeading>
