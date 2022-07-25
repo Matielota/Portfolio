@@ -14,8 +14,8 @@ const SettingContainer=styled.div`
     position: fixed;
     bottom:80px;
     right:30px;
-    height:48vh;
-    width:6vh;
+    height:600px;
+    width:115px;
     border-radius:5px;
     opacity:0;
     z-index:-5;
@@ -33,8 +33,8 @@ const Colores=styled.button`
   border-radius:50%;
   margin-left:5px;
   margin-bottom:5px;
-  height:40px;
-  width:40px;
+  height:30px;
+  width:30px;
   border-color: transparent;
 `
 const Colores2=styled.button`
@@ -42,8 +42,8 @@ const Colores2=styled.button`
   bottom:85px;
   right:38px;
   border-radius:50%;
-  height:40px;
-  width:40px;
+  height:30px;
+  width:30px;
   border-color: gray;
   background-color: transparent;
 `
