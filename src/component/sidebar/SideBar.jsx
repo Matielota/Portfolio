@@ -7,7 +7,8 @@ import { useRef } from 'react'
 import styled,{ keyframes } from "styled-components";
 import { greatView } from "../../responsive.js";
 import { useDispatch, useSelector} from "react-redux";
-
+import curriculum from "./CurriculumCaceresAldanaMatias.pdf"
+import axios from 'axios'
 
 
 export default function SideBar({sideNav}) {
@@ -208,7 +209,6 @@ const SocialIconslia=styled.a`
 ` 
   let asideClass = useRef(null)
  
-  console.log(sideNav)
   return (
     <Father>
       <Aside 
@@ -228,7 +228,7 @@ const SocialIconslia=styled.a`
                 <AnimationSpanLogo2></AnimationSpanLogo2>
             </LogoSection>
             <AnimateFather >
-            <NavLinksa href='https://www.linkedin.com/in/matias-caceres00/'> Sobre mi:</NavLinksa>
+            <NavLinksa href={curriculum} target="_blank" rel="noopener noreferrer" download="Curriculum Caceres Aldana Matias"> Curriculum:</NavLinksa>
             <AnimationSpan></AnimationSpan>
             <NavLinksa href='/projects'> Proyectos</NavLinksa>
             <AnimationSpan2></AnimationSpan2>
