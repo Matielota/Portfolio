@@ -151,20 +151,6 @@ const ProjectContainer=styled.div`
                   Espero que les gusten!
                 </TextZoneWorkp>
                 <span>Si quieres conocer mas sobre mis trabajos escribeme</span>
-                
-                <ContactButton style={{marginBottom :"35px"}} id="WorkContainer20">
-                 <SocialIconslia href="https://www.linkedin.com/in/matias-caceres00/" id="WorkContainer21">
-                <ContactButtonDiv id="WorkContainer22">
-                    <ContactButtonBg id="WorkContainer23"></ContactButtonBg>
-                    <ContactButtonBase id="WorkContainer24"></ContactButtonBase>
-                    <ContactButtonText id="WorkContainer25"> 
-                      Mas Sobre mi
-                    
-                    </ContactButtonText>
-                </ContactButtonDiv>    
-                </SocialIconslia>
-            </ContactButton>
-                
         </TextZoneWork >
       </SectionWork>
       <MagicWallSection id="WorkContainer26">
