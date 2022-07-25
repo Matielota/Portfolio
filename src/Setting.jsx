@@ -14,8 +14,8 @@ const SettingContainer=styled.div`
     position: fixed;
     bottom:80px;
     right:30px;
-    height:600px;
-    width:115px;
+    height:500px;
+    width:40px;
     border-radius:5px;
     opacity:0;
     z-index:-5;
