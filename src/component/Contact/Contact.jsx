@@ -209,7 +209,6 @@ const TitleWorkContact=styled.div`
                     <span>e</span>
                     </h2>
                 </TitleWorkContact>
-                <p>Siempre estoy interesado en nuevos proyectos, cualquier duda o consulta puedes escribirme </p>
             </ContactHeading>
             <div className="form-input-wrapper">
                 <FormInputGroup>
