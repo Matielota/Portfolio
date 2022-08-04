@@ -202,7 +202,7 @@ const ProjectContainer=styled.div`
             title={"Portfolio"}
             />
             <WorkContent id="WorkContainer33" img={"https://firebasestorage.googleapis.com/v0/b/ecomerce-325cc.appspot.com/o/devsCrushPortada.png?alt=media&token=8ff3596f-9ce1-480f-a4b3-7784ec5378a6"} 
-            linkto={"https://devscrush.vercel.app/game"}
+            linkto={"https://devscrush.vercel.app/"}
             linkto2=""
             textTop={`Juego busca Parejas de 3 y 4 elementos para sumar puntos `}
             textTop2={`React.js,CSS3,HTML`}
