@@ -113,7 +113,7 @@ const ContactButtonText=styled.span`
     border: none;
     color: ${color};
     &:hover ${ContactButtonBg}{width: 110%;}
-    &:hover ${ContactButtonText}{color:black;}      
+    &:hover ${ContactButtonText}{color:white;}      
 `  
 
 const ScrollDown=styled.div`
