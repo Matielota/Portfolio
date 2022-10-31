@@ -194,12 +194,12 @@ const ProjectContainer=styled.div`
             />
             
 
-            <WorkContent id="WorkContainer32" img={"https://firebasestorage.googleapis.com/v0/b/ecomerce-325cc.appspot.com/o/portfoliotapa.jpg?alt=media&token=543edb7e-97ba-4e9a-96b9-e216ba12fe1b"} 
-            linkto={"https://portfolio-matielota.vercel.app/"}
-            linkto2={"https://github.com/Matielota/Portfolio"}
-            textTop={`Simplemente mi portafolio, lo agrego por si alguien quiere observar el codigo`}
-            textTop2={`React.js Redux, CSS3,HTML`}
-            title={"Portfolio"}
+            <WorkContent id="WorkContainer32" img={"https://ucarecdn.com/ae3395e3-d83f-4bc6-b0ed-0d67337fd798/imagen31.jpg"} 
+            linkto={"https://tulipandeployfront.vercel.app/"}
+            textTop={`Se trata de un ecommerce programado como single page aplication, en donde puedes registrarte para realizar transacciones en este caso
+            ropa, la aplicacion cuenta como metodo de pago stripe, con un panel de administrador para editar y agregar productos.`}
+            textTop2={`React.js Redux, CSS3, Styled component ,Express, Node.js, Jwt. MongoDB stripe`}
+            title={"Libelula shop"}
             />
             <WorkContent id="WorkContainer33" img={"https://firebasestorage.googleapis.com/v0/b/ecomerce-325cc.appspot.com/o/devsCrushPortada.png?alt=media&token=8ff3596f-9ce1-480f-a4b3-7784ec5378a6"} 
             linkto={"https://devscrush.vercel.app/"}
